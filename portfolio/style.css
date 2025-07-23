@@ -1,0 +1,269 @@
+/* Mobile (up to 575px) */
+@media (max-width: 575.98px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+  }
+}
+
+/* Tablets (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .navbar {
+    padding: 0.8rem 1.5rem;
+    font-size: 15px;
+  }
+}
+
+/* Laptops (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar {
+    padding: 1rem 2rem;
+    font-size: 16px;
+  }
+}
+
+/* Desktops (992px and above) */
+@media (min-width: 992px) {
+  .navbar {
+    padding: 1.2rem 2.5rem;
+    font-size: 17px;
+  }
+}
+
+
+
+
+body {
+      transition: background 0.5s, color 0.5s;
+    }
+
+    .highlight {
+      color: #ffc107; /* Bootstrap yellow */
+      font-weight: bold;
+    }
+
+    .blink {
+      animation: blink-animation 1.2s steps(2, start) infinite;
+    }
+
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    .mode-toggle {
+      cursor: pointer;
+    }
+
+    .hero-section {
+      min-height: 0vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 30px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  .nav-link {
+    color: black;
+    text-align: left;
+    font-weight: 600;
+}
+.nav-link:hover {
+  color: #0d6efd ; 
+ 
+}
+
+.container-fluid{
+  width: 100%;
+}
+    .about-section {
+      padding: 60px 0;
+    }
+
+    .about-img {
+      max-width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      height: 350px;
+    }
+
+    .about-details h2 {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    .about-details p.desc {
+      color: #6c757d;
+      margin-bottom: 30px;
+    }
+
+    .info-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .info-list li {
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .info-list span {
+      font-weight: 600;
+      color: #000;
+      min-width: 120px;
+      display: inline-block;
+    }
+
+    .project-count {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+
+    .project-count strong {
+      color: #000000;
+    }
+
+    .btn-download {
+      border-radius: 50px;
+      padding: 10px 30px;
+      font-weight: 600;
+    }
+
+
+
+     .swiper-button-prev, .swiper-button-next {
+      color: black;
+      font-weight: bold;
+    }
+
+
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+
+   .section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
+
+.nav-link {
+  cursor: pointer;
+  font-weight: bold;
+  color: #000;
+}
+
+.nav-link.active, .nav-link:hover {
+  color: #000000;
+  background-color: #eef4ff;
+  border-left: 4px solid #3b82f6;
+}
+
+
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  footer{
+    background: #000000;
+    padding-top:50px;
+  }
+  .fcontainer{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    color: #dededeb3;
+  }
+  .footer{
+    width: 33.33%;
+ }
+h3{
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.footer-content p{
+width: 100%;
+margin: auto;
+padding: 7px;
+text-align: center;
+} 
+.footer-content ul{
+  text-align: center;
+}
+.list{
+  padding: 0px;
+}
+.list ul{
+  width: auto;
+  text-align: center;
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+}
+.list li::before{
+  color: '';
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left:50% ;
+  top: 100px;
+  width: 0px;
+  height: 2px;
+  background: #f18930;
+  transition-duration: .5s;
+}
+.list li:hover::before{
+  width: 70px;
+}
+.social-icons{
+  text-align: center;
+  padding: 0;
+}
+.social-icons li{
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+}
+.social-icons i{
+  color: white;
+  font-size: 25px;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:#f18930 ;
+}
+.social-icons i:hover{
+  color: #f18930;
+}
+.bootom-bar
+{
+  background: #000000;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+.bootom-bar p{
+  color: #000000;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+  color: white;
+}
