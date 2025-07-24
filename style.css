@@ -73,11 +73,13 @@ body {
   .nav-link {
     color: black;
     text-align: left;
-    font-weight: 600;
+  font-weight: bold;
+
 }
-.nav-link:hover {
-  color: #0d6efd ; 
- 
+.nav-link.active, .nav-link:hover {
+  color: #000000;
+  background-color: #eef4ff;
+  border-left: 4px solid #3b82f6;
 }
 
 .container-fluid{
@@ -159,18 +161,6 @@ body {
 
 .section.active {
   display: block;
-}
-
-.nav-link {
-  cursor: pointer;
-  font-weight: bold;
-  color: #000;
-}
-
-.nav-link.active, .nav-link:hover {
-  color: #000000;
-  background-color: #eef4ff;
-  border-left: 4px solid #3b82f6;
 }
 
 
@@ -269,10 +259,6 @@ a:hover{
 }
 
 
-
-
-
-
 .card:hover {
     border: 2px solid #007bff;
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
@@ -283,3 +269,10 @@ a:hover{
   .card {
     transition: 0.3s ease-in-out;
   }
+ .navbar-brand {
+      font-weight: bold;
+    }
+    .nav-link:hover {
+      color: #0d6efd !important;
+    }
+    
