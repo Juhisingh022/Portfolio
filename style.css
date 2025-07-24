@@ -267,3 +267,19 @@ a:hover{
   padding: 7px;
   color: white;
 }
+
+
+
+
+
+
+.card:hover {
+    border: 2px solid #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+  }
+
+  .card {
+    transition: 0.3s ease-in-out;
+  }
