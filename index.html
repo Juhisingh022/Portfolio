@@ -327,41 +327,43 @@ Looking forward to working on exciting real-world projects and growing in the so
     <!-- Add more cards as needed -->
   </div>
 
-<div class="row p-4">
+<div class="row p-4 skills-section">
   <div class="col-md-6">
-    <label>HTML <span class="float-end">&nbsp;100%</span></label>
+    <label>HTML <span class="float-end">100%</span></label>
     <div class="progress mb-3">
-      <div class="progress-bar bg-scuess" style="width: 100%" ></div>
+      <div class="progress-bar" data-value="100"></div>
     </div>
 
-    <label>CSS <span class="float-end"> &nbsp;95%</span></label>
+    <label>CSS <span class="float-end">95%</span></label>
     <div class="progress mb-3">
-      <div class="progress-bar bg-primary" style="width: 95%"></div>
+      <div class="progress-bar" data-value="95"></div>
     </div>
 
-    <label>Java Script <span class="float-end">&nbsp;75%</span></label>
+    <label>JavaScript <span class="float-end">75%</span></label>
     <div class="progress mb-3">
-      <div class="progress-bar bg-primary" style="width: 75%"></div>
+      <div class="progress-bar" data-value="75"></div>
     </div>
   </div>
 
   <div class="col-md-6">
-    <label>Java <span class="float-end">&nbsp;85%</span></label>
+    <label>Java <span class="float-end">85%</span></label>
     <div class="progress mb-3">
-      <div class="progress-bar bg-primary" style="width: 85%"></div>
+      <div class="progress-bar" data-value="85"></div>
     </div>
 
-    <label>Spring Boot <span class="float-end">&nbsp;75%</span></label>
+    <label>Spring Boot <span class="float-end">50%</span></label>
     <div class="progress mb-3">
-      <div class="progress-bar bg-primary" style="width: 75%"></div>
+      <div class="progress-bar" data-value="50"></div>
     </div>
 
-    <label>Boot Strap <span class="float-end"> &nbsp;80%</span></label>
+    <label>Bootstrap <span class="float-end">80%</span></label>
     <div class="progress mb-3">
-      <div class="progress-bar bg-primary" style="width: 80%"></div>
+      <div class="progress-bar" data-value="80"></div>
     </div>
   </div>
 </div>
+
+
 
 </div>
 <!--  Certificate section-->
@@ -448,6 +450,58 @@ Looking forward to working on exciting real-world projects and growing in the so
 
    
 </Section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const progressBars = document.querySelectorAll(".progress-bar");
+
+  function animateBars() {
+    progressBars.forEach(bar => {
+      let value = bar.getAttribute("data-value");
+      let width = 0;
+
+      let interval = setInterval(() => {
+        if (width >= value) {
+          clearInterval(interval);
+
+          // Final color apply
+          if (value <= 50) {
+            bar.style.backgroundColor = "red";
+          } else if (value <= 75) {
+            bar.style.backgroundColor = "orange";
+          } else if (value <= 85) {
+            bar.style.backgroundColor = "gold";
+          } else if (value == 100) {
+            bar.style.backgroundColor = "green";
+          } else {
+            bar.style.backgroundColor = "#0d6efd"; // Bootstrap blue (default)
+          }
+
+        } else {
+          width++;
+          bar.style.width = width + "%";
+        }
+      }, 15); // speed
+    });
+  }
+
+  // Trigger when visible
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  window.addEventListener("scroll", function scrollHandler() {
+    const skills = document.querySelector(".skills-section");
+    if (isInViewport(skills)) {
+      animateBars();
+      window.removeEventListener("scroll", scrollHandler);
+    }
+  });
+});
+</script>
+
+
 
   <script>
     // Toggle between light and dark mode
