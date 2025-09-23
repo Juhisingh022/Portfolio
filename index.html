@@ -15,32 +15,50 @@
 
 <body>
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <i class="fas fa-user-circle me-2"></i> <strong>Juhi</strong>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-   <div class="nav-item collapse navbar-collapse justify-content-center" id="navMenu">
+ <header class="bg-white shadow-md">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     
-      <ul class="navbar-nav mb-2 mb-lg-0 gap-3 fw-semibold">
-        <li><a class="nav-link " href="#about">About</a></li>
-        <li><a class="nav-link" href="#project">Projects</a></li>
-         <li><a class="nav-link" href="#education">Education</a></li>
-        <li><a class="nav-link" href="JuhiSingh_CV (6).pdf">Resume</a></li>
-          <li><a class="nav-link" href="#skills">Skills</a></li>
-        </ul>
-      </div>
-      <div class="nav-item">
-       <span class="nav-link mode-toggle" id="modeToggle">
-              <i class="fas fa-moon"></i> Color mode
-       </span>
+    <!-- Logo -->
+    <h1 class="text-2xl font-bold text-black-800 flex items-center">
+      <i class="fas fa-user-circle me-2"></i> <strong>Juhi</strong>
+    </h1>
+    
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8">
+      <a href="#about" class="text-black-700 hover:text-blue-600"><b>About</b></a>
+      <a href="#project" class="text-black-700 hover:text-blue-600"><b>Projects</b></a>
+      <a href="#education" class="text-black-700 hover:text-blue-600"><b>Education</b></a>
+      <a href="JuhiSingh_CV (7).pdf" class="text-black-700 hover:text-blue-600"><b>Resume</b> </a>
+     <a href="#skills" class="text-black-700 hover:text-blue-600"><b>Skills</b></a>
+    <a href="#certificate" class="text-black-700 hover:text-blue-600"><b>Certificate</b></a>
+    
+    </nav>
+
+    <!-- Mode toggle (outside collapse so always visible) -->
+    <div class="nav-item ms-3">
+      <span class="nav-link mode-toggle" id="modeToggle">
+        <i class="fas fa-moon"></i> Color mode
+      </span>
     </div>
-    </div>
-  </nav>
+
+    <!-- Hamburger Icon (Mobile only) -->
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+      ☰
+    </button>
+  </div>
+
   
+  <!-- Mobile Menu (hidden by default) -->
+<div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4 space-y-2 shadow-md">
+  <a href="#about" class="block text-black-700 hover:text-blue-600">About</a>
+  <a href="#project" class="block text-black-700 hover:text-blue-600">Projects</a>
+  <a href="#education" class="block text-black-700 hover:text-blue-600">Education</a>
+  <a href="JuhiSingh_CV (7).pdf" class="block text-black-700 hover:text-blue-600">Resume</a>
+  <a href="#skills" class="block text-black-700 hover:text-blue-600">Skills</a>
+  <a href="#certificate" class="block text-black-700 hover:text-blue-600">Certificate</a>
+</div>
+</header>
+ 
 <Section>
   <!-- Hero Section -->
   <section class="hero-section container" id="home">
@@ -56,7 +74,7 @@ I am a passionate Full Stack Java Developer skilled in building dynamic and resp
 With a strong foundation in both frontend and backend development, I aim to build scalable, secure, and high-performance applications that solve real-world problems.
 </p>
       <div class="mt-4">
-        <a class="btn btn-light btn-lg me-3" href="JuhiSingh_CV (6).pdf"><i class="fas fa-file-alt me-2"></i>Download Resume</a>
+        <a class="btn btn-light btn-lg me-3" href="JuhiSingh_CV (7).pdf"><i class="fas fa-file-alt me-2"></i>Download Resume</a>
       
       </div>
     </div>
@@ -108,6 +126,48 @@ With a strong foundation in both frontend and backend development, I aim to buil
             </div>
           </div>
         </div>
+
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <div class="card shadow p-2 mb-5 bg-body rounded" style="background-color:#00eb5b; width: 70%;">
+              <div class="card-body text-center">
+                <h4 class="card-title fa-2x"style="margin-bottom:40px;"><b> SocioScore</b></h4>
+
+                <div class="row">
+                   <div class="col-md-6">
+                    <img src="Socioscore.png" alt="" style="height: 450px; width: 500px;">
+                   </div>
+                  <div class="col-md-6">
+                     <p style=" font-size: 12px; " >
+                                          
+                      <b>PURPOUSE OF SocioScore</b> <br>
+                        SocioScore provides a digital reputation and contribution tracking system that reflects credibility, responsibility, and impact. It works like a social trust score by measuring tasks and activities, encouraging accountability and participation.
+                         It helps organizations identify reliable members for roles or rewards.<br><br>
+
+                        <b>TECHNOLIGES USED</b><br>
+                        <b>Frontend:-></b>HTML,CSS,JAVASCRIPT<br>
+                       <b> Backend:-></b>JAVA ,SPRINGBOOT<br>
+                       <b>Database:-></b>MySQL<br>
+                        <b> Build tool:-></b> MAVEN<br><br>
+
+                     <b>OBJECTIVE</b><br>
+                      • To provide a digital reputation system that reflects an individual’s or organization’s credibility and responsibility.  
+                      <br> • To track and evaluate user activities, tasks, and contributions in a transparent and structured way.  
+                      <br> • To encourage active participation and accountability by rewarding positive contributions.  
+                      <br> • To help organizations identify reliable and responsible members for roles, recognition, or leadership.  
+                      <br> • The SocioScore Project aims to build trust and motivation within communities or workplaces by highlighting an individual’s teamwork, dedication, and overall impact.
+                      </p>             
+                
+                  </div>
+                </div>
+               
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+
 
         <div class="carousel-item active">
           <div class="d-flex justify-content-center">
@@ -191,9 +251,9 @@ Looking forward to working on exciting real-world projects and growing in the so
         <li><span>Phone:</span> +91 78803-44407</li>
       </ul>
 
-      <p class="project-count"><strong class="text-black">2</strong> Project complete</p>
+      <p class="project-count"><strong class="text-black">3</strong> Project completed</p>
 
-      <a href="JuhiSingh_CV (6).pdf" class="btn bg-black text-white btn-download">Download CV</a>
+      <a href="JuhiSingh_CV (7).pdf" class="btn bg-black text-white btn-download">Download CV</a>
     </div>
   </div>
 </div>
@@ -565,6 +625,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
    
       </script>
+
+      <!-- Script for toggle -->
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
