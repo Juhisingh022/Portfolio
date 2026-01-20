@@ -17,9 +17,17 @@
  <header class="bg-white shadow-md">
   <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo -->
-    <h1 class="text-2xl font-bold text-black-800 flex items-center">
-      <i class="fas fa-user-circle me-2"></i> <strong>Juhi</strong>
-    </h1>
+    <h1 class="text-2xl font-bold text-black flex items-center">
+  <!-- Small Circular Image -->
+ <img
+  src="juhiprofile.jpeg"
+  alt="profile"
+  class="w-8 h-8 rounded-full object-cover me-2"
+  loading="lazy"
+/>
+<strong>JUHI</strong>
+</h1>
+
     <!-- Desktop Menu -->
     <nav class="hidden md:flex space-x-8">
       <a href="#about" class="text-black-700 hover:text-blue-600"><b>About</b></a>
@@ -165,14 +173,7 @@
                      <p style=" font-size: 12px; " >
                                           
                       <b>PURPOSE OF Portfolio</b> <br>
-                        To showcase my skills, projects, education, and certifications in a structured and modern way.
-
-Acts as a digital resume for recruiters, clients, or collaborators.
-
-Demonstrates my frontend + basic backend knowledge.
-
-<br><br>
-
+                        To showcase my skills, projects, education, and certifications in a structured and modern way.Acts as a digital resume for recruiters, clients, or collaborators.Demonstrates my frontend + basic backend knowledge.<br><br>
                         <b>TECHNOLIGES USED</b><br>
                         <b>Frontend:-></b>HTML,CSS,JAVASCRIPT<br>
                        <b> Frameworks:-></b> Bootstrap 5, Tailwind (CDN-based)<br><br>
@@ -207,12 +208,12 @@ Demonstrates my frontend + basic backend knowledge.
 <!--About section-->
 <div>
 <h2 class="text-black p-5 fa-3x text-center" id="about"><b>About Me </b></h2>
-      <p class="desc text-center">I am a Full Stack Java Developer with a focus on building complete web applications—from 
+      <p class="desc text-center"><i>I am a Full Stack Java Developer with a focus on building complete web applications—from 
         designing intuitive user interfaces to developing robust backend systems. I am proficient in technologies like Java, 
         Spring Boot, MySQL, HTML, CSS, Bootstrap, and JavaScript.I’m continuously learning and improving, currently exploring 
         advanced Spring Boot modules, security, and deployment. My passion lies in problem-solving, clean code, and creating
          user-friendly digital experiences.Looking forward to working on exciting real-world projects and growing in the
-          software development field!
+          software development field!</i>
       </p>
   <div class="container about-section " style="display: flex;
       align-items: center;
@@ -359,6 +360,34 @@ Demonstrates my frontend + basic backend knowledge.
       </div>
     </div>
     <!-- Add more cards -->
+
+     <!-- Maven Card -->
+<div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
+  <div class="card-body text-center">
+    <img src="maven-svgrepo-com.svg"
+         alt="Maven"
+         class="mb-3 d-block mx-auto"
+         style="width: 40px; height: 40px; object-fit: contain;">
+    <h5 class="card-title">Maven</h5>
+    <p class="card-text">
+      Used for project build, dependency management, and lifecycle management in Java applications.
+    </p>
+  </div>
+</div>
+
+
+
+<!-- Docker Card -->
+<div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
+  <div class="card-body text-center">
+    <i class="fab fa-docker fa-2x text-primary mb-3"></i>
+    <h5 class="card-title">Docker</h5>
+    <p class="card-text">
+      Used to containerize applications for consistent deployment across different environments.
+    </p>
+  </div>
+</div>
+
   </div>
 
 <div class="row p-4 skills-section">
@@ -430,6 +459,121 @@ Demonstrates my frontend + basic backend knowledge.
   </div> 
 </div>
 </div>
+<!--feedback-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<button class="floating-feedback-btn" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+    <i class="fa-solid fa-comment-dots fa-lg"></i>
+    <span>Feedback</span>
+</button>
+
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
+      <div class="modal-header" style="border: none; padding-bottom: 0; position: absolute; right: 10px; z-index: 10;">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="padding: 0;">
+        <div class="main-container" style="display: flex; justify-content: center; padding: 20px; font-family: 'Poppins', sans-serif;">
+            <div class="feedback-card" style="display: flex; flex-wrap: wrap; width: 100%; align-items: center; gap: 20px;">
+                
+                <div class="feedback-left d-none d-md-block" style="flex: 1; text-align: left; padding: 20px;">
+                    <h1 style="font-size: 28px; font-weight: 700; color: #2c3e50; margin-bottom: 10px;">Give Your Feedback</h1>
+                    <p style="color: #7f8c8d; margin-bottom: 20px;">Let us know your thoughts!</p>
+                    <img src="download.png" alt="Feedback" style="width: 100%; max-width: 250px;">
+                </div>
+
+                <div class="feedback-right" style="flex: 1; background: #ffffff; padding: 20px; border-radius: 15px;">
+                    <form id="feedbackForm">
+                        <div style="position: relative; margin-bottom: 15px;">
+                            <i class="fa-regular fa-user" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #95a5a6;"></i>
+                            <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px 12px 12px 45px; border: 1px solid #dfe6e9; border-radius: 8px; outline: none;">
+                        </div>
+
+                        <div style="position: relative; margin-bottom: 15px;">
+                            <i class="fa-regular fa-envelope" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #95a5a6;"></i>
+                            <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 12px 12px 12px 45px; border: 1px solid #dfe6e9; border-radius: 8px; outline: none;">
+                        </div>
+
+                        <textarea name="message" placeholder="Your Message" rows="4" required style="width: 100%; padding: 12px 15px; border: 1px solid #dfe6e9; border-radius: 8px; outline: none; resize: none; margin-bottom: 15px;"></textarea>
+                        
+                        <div id="starRating" style="margin-bottom: 20px; display: flex; gap: 5px;">
+                            <i class="fa-solid fa-star star-icon" data-value="1" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                            <i class="fa-solid fa-star star-icon" data-value="2" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                            <i class="fa-solid fa-star star-icon" data-value="3" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                            <i class="fa-solid fa-star star-icon" data-value="4" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                            <i class="fa-solid fa-star star-icon" data-value="5" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                        </div>
+                        <input type="hidden" name="rating" id="rating_hidden" value="0">
+
+                        <button type="submit" id="submitBtn" style="background-color: #ffcc29; border: none; padding: 12px; border-radius: 25px; color: white; font-weight: 600; width: 100%;">
+                            Submit Feedback
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    // 1. EmailJS Initialization
+    (function() {
+        emailjs.init("dKc8CQVQLXJXw_V3u"); 
+    })();
+
+    // 2. Stars Logic
+    const stars = document.querySelectorAll('.star-icon');
+    let selectedRating = 0;
+
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            selectedRating = star.getAttribute('data-value');
+            document.getElementById('rating_hidden').value = selectedRating;
+            updateStars(selectedRating);
+        });
+        star.addEventListener('mouseover', () => updateStars(star.getAttribute('data-value')));
+        star.addEventListener('mouseleave', () => updateStars(selectedRating));
+    });
+
+    function updateStars(rating) {
+        stars.forEach(s => {
+            s.style.color = s.getAttribute('data-value') <= rating ? "#ffcc29" : "#ccc";
+        });
+    }
+
+    // 3. Form Submission & Modal Auto-Close
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        btn.innerText = "Sending...";
+        btn.disabled = true;
+
+        emailjs.sendForm('service_3rbjnhe', 'template_oemt2p9', this)
+            .then(() => {
+                alert("Success! Your feedback has been sent.");
+                
+                // Modal Close Logic
+                const modalElement = document.getElementById('feedbackModal');
+                const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (modalInstance) modalInstance.hide();
+
+                btn.innerText = "Submit Feedback";
+                btn.disabled = false;
+                this.reset(); 
+                selectedRating = 0;
+                updateStars(0); 
+            }, (error) => {
+                alert("Error: " + JSON.stringify(error));
+                btn.innerText = "Submit Feedback";
+                btn.disabled = false;
+            });
+    });
+</script>
 <!--  footer section-->
 <footer>
 <div class="fcontainer">
