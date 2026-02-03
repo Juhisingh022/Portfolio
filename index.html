@@ -33,14 +33,14 @@
       <a href="#about" class="text-black-700 hover:text-blue-600"><b>About</b></a>
       <a href="#project" class="text-black-700 hover:text-blue-600"><b>Projects</b></a>
       <a href="#education" class="text-black-700 hover:text-blue-600"><b>Education</b></a>
-      <a href="JuhiSingh_CV (7).pdf" class="text-black-700 hover:text-blue-600"><b>Resume</b> </a>
+      <a href="JUHI.pdf" class="text-black-700 hover:text-blue-600"><b>Resume</b> </a>
      <a href="#skills" class="text-black-700 hover:text-blue-600"><b>Skills</b></a>
     <a href="#certificate" class="text-black-700 hover:text-blue-600"><b>Certificate</b></a>
     </nav>
     <div class="nav-item ms-3">
-      <span class="nav-link mode-toggle" id="modeToggle">
-        <i class="fas fa-moon"></i> Color mode
-      </span>
+      <span id="modeToggle" class="cursor-pointer">
+      <i class="fas fa-moon"></i>
+    </span>
     </div>
     <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
       ☰
@@ -50,7 +50,7 @@
   <a href="#about" class="block text-black-700 hover:text-blue-600"><b>About</b></a>
   <a href="#project" class="block text-black-700 hover:text-blue-600"><b>Projects</b></a>
   <a href="#education" class="block text-black-700 hover:text-blue-600"><b>Education</b></a>
-  <a href="JuhiSingh_CV (7).pdf" class="block text-black-700 hover:text-blue-600"><b>Resume</b> </a>
+  <a href="JUHI.pdf" class="block text-black-700 hover:text-blue-600"><b>Resume</b> </a>
   <a href="#skills" class="block text-black-700 hover:text-blue-600"><b>Skills</b></a>
   <a href="#certificate" class="block text-black-700 hover:text-blue-600"><b>Certificate</b></a>
 </div>
@@ -64,19 +64,30 @@
       <h1 class="fw-bold display-5">
         Hey, I'm <span class="highlight blink">Juhi Singh</span>
       </h1>
-      <p class="mt-3 text-secondary">
-        I am a passionate Full Stack Java Developer skilled in building dynamic and responsive web applications using Java, 
-        Spring Boot, MySQL, HTML, CSS, JavaScript, and modern frameworks. I love turning complex problems into clean, user-friendly 
-        designs and efficient backend systems.With a strong foundation in both frontend and backend development, I aim to build scalable,
-        secure, and high-performance applications that solve real-world problems.
+       <p class="text-secondary mt-3">
+        Full Stack Java Developer with hands-on experience in building scalable web applications
+        using Java, Spring Boot, REST APIs, MySQL, and modern frontend technologies.
+        Focused on clean architecture, performance, and real-world problem solving.
       </p>
 
-      <div class="mt-4">
-        <a class="btn btn-light btn-lg me-3" href="JuhiSingh_CV (7).pdf"><i class="fas fa-file-alt me-2"></i>Download Resume</a>
+      <!-- Tech Stack Badges -->
+      <div class="mt-3">
+        <span class="badge bg-dark">Java</span>
+        <span class="badge bg-dark">Spring Boot</span>
+        <span class="badge bg-dark">REST API</span>
+        <span class="badge bg-dark">MySQL</span>
+        <span class="badge bg-dark">Docker</span>
+        <span class="badge bg-dark">Bootstrap</span>
+      </div>
+
+       <div class="mt-4">
+        <a href="JUHI.pdf" class="btn btn-dark btn-lg">
+          <i class="fas fa-download me-2"></i>Download Resume
+        </a>
       </div>
     </div>
-    <div class="col-lg-6 d-none d-lg-block">
-      <img src="image1.svg" class="img-fluid" alt="Illustration">
+   <div class="col-lg-6 d-none d-lg-block">
+      <img src="image1.svg" class="img-fluid" loading="lazy">
     </div>
   </section>
    <p class="text-black p-4 fa-3x text-center"id="project" ><b>Projects</b> </p><br>
@@ -112,7 +123,10 @@
                        <br> • You can view the complete map of city using this project.
 
                        <br> The XplorIndia Project aims to enhance the experience of exploring the city by providing a reliable, easy-to-use, and comprehensive resource. It stores details of a city and displays information about the city such as hotels, colleges, tourist places, and also some general information.This acts as a guide to the new visitors.
-                   </p>             
+                   <!-- <br><a href="https://github.com/Juhisingh022/XplorIndia" target="_blank" class="btn btn-outline">
+                        View Project
+                      </a> -->
+                      </p>             
                 
                   </div>
                 </div>
@@ -142,7 +156,7 @@
                         <b>Frontend:-></b>HTML,CSS,JAVASCRIPT<br>
                        <b> Backend:-></b>JAVA ,SPRINGBOOT<br>
                        <b>Database:-></b>MySQL<br>
-                        <b> Build tool:-></b> MAVEN<br><br>
+                        <b> Build tool:-></b> MAVEN, DOCKER<br><br>
 
                      <b>OBJECTIVE</b><br>
                       • To provide a digital reputation system that reflects an individual’s or organization’s credibility and responsibility.  
@@ -150,7 +164,10 @@
                       <br> • To encourage active participation and accountability by rewarding positive contributions.  
                       <br> • To help organizations identify reliable and responsible members for roles, recognition, or leadership.  
                       <br> • The SocioScore Project aims to build trust and motivation within communities or workplaces by highlighting an individual’s teamwork, dedication, and overall impact.
-                      </p>             
+                     <!-- <br><a href="https://github.com/Juhisingh022/SocioScore" target="_blank" class="btn btn-outline">
+                         View Project
+                        </a>  -->
+                    </p>             
                 
                   </div>
                 </div>
@@ -159,69 +176,44 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item active">
-          <div class="d-flex justify-content-center">
-            <div class="card shadow p-2 mb-5 bg-body rounded" style="background-color:#00eb5b; width: 70%;">
-              <div class="card-body text-center">
-                <h4 class="card-title fa-2x"style="margin-bottom:40px;"><b> Portfolio</b></h4>
-
-                <div class="row">
-                   <div class="col-md-6">
-                    <img src="portfolio_image.jpg" alt="" style="height: 450px; width: 450px;">
-                   </div>
-                  <div class="col-md-6">
-                     <p style=" font-size: 12px; " >
-                                          
-                      <b>PURPOSE OF Portfolio</b> <br>
-                        To showcase my skills, projects, education, and certifications in a structured and modern way.Acts as a digital resume for recruiters, clients, or collaborators.Demonstrates my frontend + basic backend knowledge.<br><br>
-                        <b>TECHNOLIGES USED</b><br>
-                        <b>Frontend:-></b>HTML,CSS,JAVASCRIPT<br>
-                       <b> Frameworks:-></b> Bootstrap 5, Tailwind (CDN-based)<br><br>
-                      
-
-                       <b>FEATURES</b><br>
-                        • Responsive and mobile-friendly layout.
-                       <br> • Color theme toggle (light/dark mode) using JavaScript.
-                       <br> • Animated Hero section with blinking name highlight.
-                        <br> • Project carousel using Bootstrap.
-                        <br> • Sections:Hero (Welcome intro), Projects (with details and images), About Me (Profile + details),Education (cards with icons and timeline),Skills (cards + progress bars), Certificates, Footer with social links.
-                          <br> • Downloadable Resume Button.<br><br>
-                       <b>OBJECTIVE</b><br>
-                        • Created a professional online presence.
-                       <br> • Practiced advanced layout design and responsive UI development.
-                       <br> • Learned how to organize project content and skills for career growth.
-
-
-
-
-                         </p>             
-                
-                  </div>
-                </div>
-               
-                </div>
-            </div>
-          </div>
-        </div>
+        
     </div>
   </div>
 <!--About section-->
 <div>
 <h2 class="text-black p-5 fa-3x text-center" id="about"><b>About Me </b></h2>
-      <p class="desc text-center"><i>I am a Full Stack Java Developer with a focus on building complete web applications—from 
-        designing intuitive user interfaces to developing robust backend systems. I am proficient in technologies like Java, 
-        Spring Boot, MySQL, HTML, CSS, Bootstrap, and JavaScript.I’m continuously learning and improving, currently exploring 
-        advanced Spring Boot modules, security, and deployment. My passion lies in problem-solving, clean code, and creating
-         user-friendly digital experiences.Looking forward to working on exciting real-world projects and growing in the
-          software development field!</i>
-      </p>
+     <p class="text-center container">
+I am a passionate Full Stack Java Developer with strong hands-on experience in building
+end-to-end web applications using Java, Spring Boot, REST APIs, MySQL, and modern frontend
+technologies. I enjoy transforming complex business requirements into efficient, scalable,
+and user-friendly solutions.
+</p>
+
+<p class="text-center container mt-3">
+I have worked on real-world projects such as <b>XplorIndia</b> and <b>SocioScore</b>, where I was
+responsible for backend development, database design, API integration, and frontend
+implementation. My approach focuses on clean code, modular architecture, and performance
+optimization.
+</p>
+
+<p class="text-center container mt-3">
+I am continuously learning new tools and best practices in software development, including
+Docker-based deployment, version control using Git, and secure application design.
+I am eager to contribute my skills to a growth-oriented organization, collaborate with
+cross-functional teams, and build impactful software solutions that solve real-world problems.
+</p>
+
+
   <div class="container about-section " style="display: flex;
       align-items: center;
       justify-content: space-evenly;
       padding: 60px 30px;">
   <div class="row align-items-center ">
     <div class="col-lg-5 mb-4 mb-lg-0 ">
-      <img src="image3.jpg" alt="Profile"  class="about-img w-80">
+      <img 
+  src="image3.jpg" 
+  alt="Juhi Singh - Full Stack Java Developer" 
+  class="about-img w-80">
     </div>
     <!-- Right: Info -->
     <div class="col-lg-7 about-details ">
@@ -233,8 +225,10 @@
         <li><span>Email:</span> juhirajput022@gmail.com</li>
         <li><span>Phone:</span> +91 78803-44407</li>
       </ul>
-      <p class="project-count"><strong class="text-black">3</strong> Project completed</p>
-      <a href="JuhiSingh_CV (7).pdf" class="btn bg-black text-white btn-download">Download CV</a>
+<p class="project-count">
+  <strong class="text-black">2</strong> Projects Completed
+</p>
+ <a href="JUHI.pdf" class="btn bg-black text-white btn-download">Download CV</a>
     </div>
   </div>
 </div>
@@ -242,65 +236,21 @@
 <!--  Education section-->
 <div class="container-fluid " >
    <h3 class=" text-black p-5 fa-3x text-center" id="education" ><b>Education</b></h3>      
-  <div class="row ">
-    <!-- Main Content -->
- <div class="col-md-9 p-4" id="main-content" >
-<div id="education" class="section active">
+ 
 
 <!-- Cards go here -->
-<div class="card mb-3 shadow-sm border-1 " style="width: 100%; ">
-  <div class="card-body">
-    <div class="d-flex align-items-center mb-2">
-      <i class="fas fa-graduation-cap fa-2x text-black mr-3"></i>
-      <div>
-        <h5 class="card-title mb-1">MCA (Master Of Computer Application)</h5>
-        <h6 class="card-subtitle text-muted">MMMUT, Gorakhpur</h6>
-      </div>
-    </div>
-    <p class="card-text mb-1"><strong>Duration:</strong> 2024 - 2026</p>
-    <p class="card-text">Focused on core subjects like Data Structures, DBMS, Web Development, Computer Network,  and Operating System.</p>
+<div class="container">
+  <div class="card mb-3 shadow-sm p-3">
+    <h5><b>MCA – MMMUT, Gorakhpur (2024–2026)</b></h5>
+    <p>Core Subjects: Data Structures, DBMS, Web Development, OS</p>
+  </div>
+
+  <div class="card mb-3 shadow-sm p-3">
+    <h5><b>BCA – DDU, Gorakhpur (2021–2024)</b></h5>
+    <p>Core Subjects: Java, DBMS, Web Development</p>
   </div>
 </div>
-<div class="card mb-3 shadow-sm border-1"style="width: 100%; " >
-  <div class="card-body">
-    <div class="d-flex align-items-center mb-2">
-      <i class="fas fa-graduation-cap fa-2x text-black mr-3"></i>
-      <div>
-        <h5 class="card-title mb-1">BCA (Bachelor Of Computer Application)</h5>
-        <h6 class="card-subtitle text-muted">DDU, Gorakhpur</h6>
-      </div>
-    </div>
-    <p class="card-text mb-1"><strong>Duration:</strong> 2021 - 2024</p>
-    <p class="card-text">Focused on core subjects like Data Structures, DBMS, Web Development, and Operating System.</p>
-  </div>
-</div>
- <div class="card mb-3 shadow-sm border-1" style="width: 100%;">
-  <div class="card-body">
-    <div class="d-flex align-items-center mb-2">
-      <i class="fas fa-graduation-cap fa-2x text-black mr-3"></i>
-      <div>
-        <h5 class="card-title mb-1">12th</h5>
-        <h6 class="card-subtitle text-muted">Kamla Singh Girls Inter College, Gorakhpur</h6>
-      </div>
-    </div>
-    <p class="card-text mb-1"><strong>Duration:</strong> 2019 - 2021</p>
-     </div>
-</div>
- <div class="card mb-3 shadow-sm border-1" style="width: 100%;">
-  <div class="card-body">
-    <div class="d-flex align-items-center mb-2">
-      <i class="fas fa-graduation-cap fa-2x text-black mr-3"></i>
-      <div>
-        <h5 class="card-title mb-1">10th</h5>
-        <h6 class="card-subtitle text-muted">Oxford Public School, Gorakhpur</h6>
-      </div>
-    </div>
-    <p class="card-text mb-1"><strong>Duration:</strong> 2017 - 2019</p>
-     </div>
-     </div>
-      </div>
-    </div>
-  </div>
+      
 </div>
  <!--  skill section-->   
 <div class="container my-5"id="skills" >
