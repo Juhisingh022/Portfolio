@@ -1,614 +1,857 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <script src="https://cdn.tailwindcss.com"></script>
-     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Typed JS -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
 </head>
+
 <body>
   <!-- Navbar -->
- <header class="bg-white shadow-md">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <h1 class="text-2xl font-bold text-black flex items-center">
-  <!-- Small Circular Image -->
- <img
-  src="juhiprofile.jpeg"
-  alt="profile"
-  class="w-8 h-8 rounded-full object-cover me-2"
-  loading="lazy"
-/>
-<strong>JUHI</strong>
-</h1>
+<header class="fixed top-0 w-full z-[1000] transition-all duration-300" id="navbar">
+  <nav class="bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+      
+      <a href="#home" class="flex items-center group no-underline">
+        <div class="relative">
+          <img src="juhiprofile.jpeg" alt="profile" 
+               class="w-10 h-10 rounded-full object-cover border-2 border-primary transition-transform group-hover:scale-110" 
+               loading="lazy" />
+          <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
+        </div>
+        <span class="ms-3 text-xl font-black tracking-tighter text-black">
+          JUHI<span class="text-blue-600">.</span>
+        </span>
+      </a>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden md:flex space-x-8">
-      <a href="#about" class="text-black-700 hover:text-blue-600"><b>About</b></a>
-      <a href="#project" class="text-black-700 hover:text-blue-600"><b>Projects</b></a>
-      <a href="#education" class="text-black-700 hover:text-blue-600"><b>Education</b></a>
-      <a href="JUHI.pdf" class="text-black-700 hover:text-blue-600"><b>Resume</b> </a>
-     <a href="#skills" class="text-black-700 hover:text-blue-600"><b>Skills</b></a>
-    <a href="#certificate" class="text-black-700 hover:text-blue-600"><b>Certificate</b></a>
-    </nav>
-    <div class="nav-item ms-3">
-      <span id="modeToggle" class="cursor-pointer">
-      <i class="fas fa-moon"></i>
-    </span>
-    </div>
-    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
-      ☰
-    </button>
-  </div>
-<div id="mobile-menu" class="hidden md:hidden bg-white px-6 py-4 space-y-2 shadow-md">
-  <a href="#about" class="block text-black-700 hover:text-blue-600"><b>About</b></a>
-  <a href="#project" class="block text-black-700 hover:text-blue-600"><b>Projects</b></a>
-  <a href="#education" class="block text-black-700 hover:text-blue-600"><b>Education</b></a>
-  <a href="JUHI.pdf" class="block text-black-700 hover:text-blue-600"><b>Resume</b> </a>
-  <a href="#skills" class="block text-black-700 hover:text-blue-600"><b>Skills</b></a>
-  <a href="#certificate" class="block text-black-700 hover:text-blue-600"><b>Certificate</b></a>
-</div>
-</header>
- 
-<Section>
-  <!-- Hero Section -->
-  <section class="hero-section container" id="home">
-    <div class="col-lg-6">
-      <!-- <p class="text-muted fw-semibold">Welcome to my portfolio website!</p> -->
-      <h1 class="fw-bold display-5">
-        Hey, I'm <span class="highlight blink">Juhi Singh</span>
-      </h1>
-       <p class="text-secondary mt-3">
-        Full Stack Java Developer with hands-on experience in building scalable web applications
-        using Java, Spring Boot, REST APIs, MySQL, and modern frontend technologies.
-        Focused on clean architecture, performance, and real-world problem solving.
-      </p>
-
-      <!-- Tech Stack Badges -->
-      <div class="mt-3">
-        <span class="badge bg-dark">Java</span>
-        <span class="badge bg-dark">Spring Boot</span>
-        <span class="badge bg-dark">REST API</span>
-        <span class="badge bg-dark">MySQL</span>
-        <span class="badge bg-dark">Docker</span>
-        <span class="badge bg-dark">Bootstrap</span>
+      <div class="hidden md:flex items-center space-x-1">
+        <div class="d-none d-md-flex align-items-center gap-4">
+        <a href="#about" class="nav-link-custom">About</a>
+        <a href="#project" class="nav-link-custom">Projects</a>
+        <a href="#education" class="nav-link-custom">Education</a>
+        <a href="#skills" class="nav-link-custom">Skills</a>
+        <div class="h-6 w-[1px] bg-gray-200 mx-2"></div>
+        
+        <div class="flex items-center gap-4">
+          <button id="modeToggle" class="p-2 rounded-xl bg-gray-50 hover:bg-gray-100 transition-colors text-gray-700">
+            <i class="fas fa-moon"></i>
+          </button>
+          <a href="JUHI.pdf" class="bg-black text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-600 transition-all shadow-lg hover:shadow-blue-200 no-underline">
+            Resume <i class="fas fa-arrow-right ms-1 text-xs"></i>
+          </a>
+        </div>
       </div>
 
-       <div class="mt-4">
-        <a href="JUHI.pdf" class="btn btn-dark btn-lg">
-          <i class="fas fa-download me-2"></i>Download Resume
+      <button id="menu-btn" class="md:hidden p-2 text-2xl text-black focus:outline-none hover:bg-gray-50 rounded-lg transition-colors">
+        <i class="fas fa-bars-staggered" id="menu-icon"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-xl animate__animated animate__fadeInDown">
+      <div class="px-6 py-6 flex flex-col space-y-4">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#project" class="mobile-nav-link">Projects</a>
+        <a href="#education" class="mobile-nav-link">Education</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#certificate" class="mobile-nav-link">Certificate</a>
+        <hr class="border-gray-100">
+        <a href="JUHI.pdf" class="flex items-center justify-center bg-blue-600 text-white py-3 rounded-xl font-bold">
+          Download Resume
         </a>
       </div>
     </div>
-   <div class="col-lg-6 d-none d-lg-block">
-      <img src="image1.svg" class="img-fluid" loading="lazy">
+  </nav>
+</header>
+
+  <Section>
+    <!-- Hero Section -->
+    <section class="hero-section py-5 position-relative overflow-hidden" id="home" data-aos="fade-up">
+    <div class="position-absolute top-0 start-0 translate-middle bg-primary opacity-10 blur-lg" style="width: 400px; height: 400px; border-radius: 50%; filter: blur(80px);"></div>
+    
+    <div class="container position-relative z-index-1">
+        <div class="row align-items-center min-vh-75">
+            <div class="col-lg-7 text-center text-lg-start">
+                <h6 class="text-primary fw-bold text-uppercase tracking-wider mb-3 animate__animated animate__fadeInDown">
+                    <i class="fas fa-rocket me-2"></i>Available for Projects
+                </h6>
+                <h1 class="fw-bold display-3 mb-3">
+                    Hey, I'm <span id="typing" class="text-primary"></span>
+                </h1>
+                <p class="lead text-secondary mb-4 pe-lg-5">
+                    A passionate <strong>Full Stack Java Developer</strong> crafting high-performance, 
+                    scalable web applications. Currently an MCA student at <strong>MMMUT</strong>, 
+                    turning complex backend logic into seamless user experiences.
+                </p>
+
+                <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-2 mb-4">
+                    <span class="skill-tag"><i class="fab fa-java text-danger me-1"></i> Java</span>
+                    <span class="skill-tag"><i class="fas fa-leaf text-success me-1"></i> Spring Boot</span>
+                    <span class="skill-tag"><i class="fas fa-database text-info me-1"></i> MySQL</span>
+                    <span class="skill-tag"><i class="fab fa-docker text-primary me-1"></i> Docker</span>
+                    <span class="skill-tag"><i class="fab fa-bootstrap text-purple me-1"></i> Bootstrap</span>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-center justify-content-lg-start align-items-center gap-3">
+                    <a href="JUHI.pdf" class="btn btn-primary btn-lg rounded-pill shadow-lg px-4 py-3">
+                        <i class="fas fa-cloud-download-alt me-2"></i>Get Resume
+                    </a>
+                    <div class="social-links d-flex gap-3 ms-lg-3">
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 d-none d-lg-block text-center position-relative">
+                <div class="hero-img-container">
+                    <img src="image1.svg" class="img-fluid floating-animation" alt="Developer Illustration" style="max-height: 450px;">
+                    <div class="floating-card bg-white p-3 shadow-lg rounded-4 position-absolute bottom-0 start-0 animate__animated animate__bounceIn">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-success rounded-circle p-2 me-3">
+                                <i class="fas fa-code text-white"></i>
+                            </div>
+                            <div class="text-start">
+                                <p class="mb-0 small fw-bold text-dark">2+ Major</p>
+                                <p class="mb-0 tiny text-muted">Projects Built</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-   <p class="text-black p-4 fa-3x text-center"id="project" ><b>Projects</b> </p><br>
-  <div id="aartiCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="d-flex justify-content-center">
-            <div class="card shadow p-2 mb-5 bg-body rounded" style="background-color:#00eb5b; width: 70%;">
-              <div class="card-body text-center">
-                <h4 class="card-title fa-2x"style="margin-bottom:40px;"><b> XplorIndia</b></h4>
-
-                <div class="row">
-                   <div class="col-md-6">
-                    <img src="image2.png" alt="" style="height: 450px; width: 500px;">
-                   </div>
-                  <div class="col-md-6">
-                     <p style=" font-size: 12px; " >
-                                          
-                      <b>PURPOSE OF XplorIndia</b> <br>
-                        The XplorIndia Project aims to create a user-friendly digital platform. This guide provides detailed information about various aspects of the city, including:
-                        hotels,colleges,and tourist places<br><br>
-
-                        <b>TECHNOLIGES USED</b><br>
-                        <b>Frontend:-></b>HTML,CSS,JAVASCRIPT<br>
-                       <b> Backend:-></b>JAVA ,SPRINGBOOT<br>
-                       <b>Database:-></b>MySQL<br>
-                        <b> Build tool:-></b> MAVEN<br><br>
-
-                       <b>OBJECTIVE</b><br>
-                        • Using this project, the details of city can be accessed from anywhere at any time.
-                       <br> • With the help of this website, students can look for the academic institutes located in the city.
-                       <br> • You can view the complete map of city using this project.
-
-                       <br> The XplorIndia Project aims to enhance the experience of exploring the city by providing a reliable, easy-to-use, and comprehensive resource. It stores details of a city and displays information about the city such as hotels, colleges, tourist places, and also some general information.This acts as a guide to the new visitors.
-                   <!-- <br><a href="https://github.com/Juhisingh022/XplorIndia" target="_blank" class="btn btn-outline">
-                        View Project
-                      </a> -->
-                      </p>             
-                
-                  </div>
+</section>
+<!--project section-->
+    <section class="py-5 bg-light" id="project">
+      <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-5" data-aos="fade-up">Featured Projects</h2>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5" data-aos="fade-up">
+            <div class="project-card-animated">
+              <div class="img-box">
+                <img src="Socioscore.png" alt="SocioScore">
+              </div>
+              <div class="content-box">
+                <h3>SocioScore <small>Full Stack Java</small></h3>
+                <p class="text-muted small">Digital reputation system tracking credibility.</p>
+                <div class="tech-stack mt-2">
+                  <span>Spring Boot</span> <span>Docker</span>
                 </div>
-               
-                </div>
+                <button class="btn-visit" data-bs-toggle="modal" data-bs-target="#socioCaseStudy">View Case
+                  Study</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="carousel-item active">
-          <div class="d-flex justify-content-center">
-            <div class="card shadow p-2 mb-5 bg-body rounded" style="background-color:#00eb5b; width: 70%;">
-              <div class="card-body text-center">
-                <h4 class="card-title fa-2x"style="margin-bottom:40px;"><b> SocioScore</b></h4>
 
-                <div class="row">
-                   <div class="col-md-6">
-                    <img src="Socioscore.png" alt="" style="height: 450px; width: 500px;">
-                   </div>
-                  <div class="col-md-6">
-                     <p style=" font-size: 12px; " >
-                                          
-                      <b>PURPOSE OF SocioScore</b> <br>
-                        SocioScore provides a digital reputation and contribution tracking system that reflects credibility, responsibility, and impact. It works like a social trust score by measuring tasks and activities, encouraging accountability and participation.
-                         It helps organizations identify reliable members for roles or rewards.<br><br>
 
-                        <b>TECHNOLIGES USED</b><br>
-                        <b>Frontend:-></b>HTML,CSS,JAVASCRIPT<br>
-                       <b> Backend:-></b>JAVA ,SPRINGBOOT<br>
-                       <b>Database:-></b>MySQL<br>
-                        <b> Build tool:-></b> MAVEN, DOCKER<br><br>
-
-                     <b>OBJECTIVE</b><br>
-                      • To provide a digital reputation system that reflects an individual’s or organization’s credibility and responsibility.  
-                      <br> • To track and evaluate user activities, tasks, and contributions in a transparent and structured way.  
-                      <br> • To encourage active participation and accountability by rewarding positive contributions.  
-                      <br> • To help organizations identify reliable and responsible members for roles, recognition, or leadership.  
-                      <br> • The SocioScore Project aims to build trust and motivation within communities or workplaces by highlighting an individual’s teamwork, dedication, and overall impact.
-                     <!-- <br><a href="https://github.com/Juhisingh022/SocioScore" target="_blank" class="btn btn-outline">
-                         View Project
-                        </a>  -->
-                    </p>             
-                
-                  </div>
+          <div class="col-md-5" data-aos="fade-up" data-aos-delay="200">
+            <div class="project-card-animated">
+              <div class="img-box">
+                <img src="image2.png" alt="XplorIndia">
+              </div>
+              <div class="content-box">
+                <h3>XplorIndia <small>Web Guide</small></h3>
+                <p class="text-muted small">Comprehensive digital guide for city exploration and student amenities.</p>
+                <div class="tech-stack mt-2">
+                  <span>Java</span> <span>JSP</span> <span>MySQL</span>
                 </div>
-               
-                </div>
+                <button class="btn-visit" data-bs-toggle="modal" data-bs-target="#xplorCaseStudy">View Case
+                  Study</button>
+              </div>
             </div>
           </div>
+
         </div>
+      </div>
+    </section>
+    <!--About section-->
+    <section id="about" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="display-4 fw-bold text-center mb-5" data-aos="fade-up">About Me</h2>
+
+        <div class="row align-items-center justify-content-between">
+            <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                <div class="about-img-wrapper position-relative">
+                    <img src="image3.jpg" alt="Juhi Singh" class="img-fluid rounded-4 shadow-lg position-relative z-index-1">
+                    <div class="img-border-decor"></div>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <h3 class="fw-bold mb-3">I'm a Full Stack Java Developer 🚀</h3>
+                <p class="text-secondary leading-relaxed">
+                    Currently pursuing my **MCA at MMMUT**, I specialize in building robust backend systems using **Java and Spring Boot**. I am passionate about writing clean, efficient code and transforming complex business requirements into scalable digital solutions.
+                </p>
+                <p class="text-secondary mb-4">
+                    With projects like <b>SocioScore</b> and <b>XplorIndia</b>, I've gained hands-on experience in database architecture, RESTful API design, and Dockerized deployments. My goal is to build software that is not just functional, but impactful.
+                </p>
+
+                <div class="row g-3 info-grid mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-envelope text-primary me-3"></i>
+                            <div>
+                                <small class="text-muted d-block">Email</small>
+                                <span class="fw-bold">juhirajput022@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                            <div>
+                                <small class="text-muted d-block">Location</small>
+                                <span class="fw-bold">Gorakhpur, UP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-graduation-cap text-primary me-3"></i>
+                            <div>
+                                <small class="text-muted d-block">Education</small>
+                                <span class="fw-bold">MCA (2024-2026)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-briefcase text-primary me-3"></i>
+                            <div>
+                                <small class="text-muted d-block">Projects</small>
+                                <span class="fw-bold">2+ Major Apps</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-3">
+                    <a href="JUHI.pdf" class="btn btn-dark rounded-pill px-4 py-2">
+                        <i class="fas fa-download me-2"></i>Download CV
+                    </a>
+<button class="btn btn-outline-primary rounded-pill px-4 py-2" data-bs-toggle="modal" data-bs-target="#hireMeModal">
+    <i class="fas fa-paper-plane me-2"></i>Hire Me
+</button>                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!--  Education section-->
+    <section id="education" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="display-5 fw-bold text-center mb-5" data-aos="fade-up">My Education</h2>
         
+        <div class="education-timeline position-relative">
+            <div class="timeline-line d-none d-md-block"></div>
+
+            <div class="row mb-5" data-aos="fade-right">
+                <div class="col-md-6">
+                    <div class="edu-card shadow-sm">
+                        <div class="edu-badge">2024 – 2026</div>
+                        <h4 class="fw-bold text-primary mt-3">Master of Computer Applications (MCA)</h4>
+                        <h5 class="text-dark">MMMUT, Gorakhpur</h5>
+                        <p class="text-secondary mt-2">
+                            <i class="fas fa-book-open me-2"></i><b>Core Focus:</b> Data Structures, DBMS, Scalable Web Systems, and Operating Systems.
+                        </p>
+                        <span class="status-tag">Currently Pursuing</span>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center">
+                    <div class="edu-icon-circle"><i class="fas fa-graduation-cap"></i></div>
+                </div>
+            </div>
+
+            <div class="row mb-5 flex-md-row-reverse" data-aos="fade-left">
+                <div class="col-md-6">
+                    <div class="edu-card shadow-sm border-start-primary">
+                        <div class="edu-badge">2021 – 2024</div>
+                        <h4 class="fw-bold text-primary mt-3">Bachelor of Computer Applications (BCA)</h4>
+                        <h5 class="text-dark">DDU, Gorakhpur</h5>
+                        <p class="text-secondary mt-2">
+                            <i class="fas fa-code me-2"></i><b>Key Learnings:</b> Advanced Java, Database Management, and Full-Stack Fundamentals.
+                        </p>
+                        <span class="status-tag success">Completed</span>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-flex align-items-center justify-content-center">
+                    <div class="edu-icon-circle"><i class="fas fa-university"></i></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-<!--About section-->
-<div>
-<h2 class="text-black p-5 fa-3x text-center" id="about"><b>About Me </b></h2>
-     <p class="text-center container">
-I am a passionate Full Stack Java Developer with strong hands-on experience in building
-end-to-end web applications using Java, Spring Boot, REST APIs, MySQL, and modern frontend
-technologies. I enjoy transforming complex business requirements into efficient, scalable,
-and user-friendly solutions.
-</p>
+</section>
+    <!--  skill section-->
+   <section class="container py-5" id="skills">
+    <h2 class="display-4 fw-bold text-center mb-5" data-aos="fade-up">My Technical Stack</h2>
 
-<p class="text-center container mt-3">
-I have worked on real-world projects such as <b>XplorIndia</b> and <b>SocioScore</b>, where I was
-responsible for backend development, database design, API integration, and frontend
-implementation. My approach focuses on clean code, modular architecture, and performance
-optimization.
-</p>
+    <div class="row g-4 mb-5 justify-content-center">
+        <div class="col-12"><h4 class="text-primary fw-bold mb-3"><i class="fas fa-server me-2"></i>Backend & DevOps</h4></div>
+        
+        <div class="col-6 col-md-3" data-aos="zoom-in">
+            <div class="skill-card-new text-center p-4">
+                <i class="fab fa-java fa-3x text-danger mb-3"></i>
+                <h6>Java</h6>
+            </div>
+        </div>
 
-<p class="text-center container mt-3">
-I am continuously learning new tools and best practices in software development, including
-Docker-based deployment, version control using Git, and secure application design.
-I am eager to contribute my skills to a growth-oriented organization, collaborate with
-cross-functional teams, and build impactful software solutions that solve real-world problems.
-</p>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="skill-card-new text-center p-4">
+                <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                <h6>Spring Boot</h6>
+            </div>
+        </div>
 
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="skill-card-new text-center p-4">
+                <i class="fab fa-docker fa-3x text-primary mb-3"></i>
+                <h6>Docker</h6>
+            </div>
+        </div>
 
-  <div class="container about-section " style="display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 60px 30px;">
-  <div class="row align-items-center ">
-    <div class="col-lg-5 mb-4 mb-lg-0 ">
-      <img 
-  src="image3.jpg" 
-  alt="Juhi Singh - Full Stack Java Developer" 
-  class="about-img w-80">
-    </div>
-    <!-- Right: Info -->
-    <div class="col-lg-7 about-details ">
-     <ul class="info-list">
-        <li><span>Name:</span> Juhi Singh</li>
-        <li><span>Date of birth:</span> June 21, 2004</li>
-        <li><span>Address:</span> Golghar, Gorakhpur, Uttar Pradesh</li>
-        <li><span>Zip code:</span> 273001</li>
-        <li><span>Email:</span> juhirajput022@gmail.com</li>
-        <li><span>Phone:</span> +91 78803-44407</li>
-      </ul>
-<p class="project-count">
-  <strong class="text-black">2</strong> Projects Completed
-</p>
- <a href="JUHI.pdf" class="btn bg-black text-white btn-download">Download CV</a>
-    </div>
-  </div>
-</div>
-</div>
-<!--  Education section-->
-<div class="container-fluid " >
-   <h3 class=" text-black p-5 fa-3x text-center" id="education" ><b>Education</b></h3>      
- 
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="skill-card-new text-center p-4">
+                <img src="maven-svgrepo-com.svg" style="width:48px; height:48px;" class="mb-3 mx-auto">
+                <h6>Maven</h6>
+            </div>
+        </div>
 
-<!-- Cards go here -->
-<div class="container">
-  <div class="card mb-3 shadow-sm p-3">
-    <h5><b>MCA – MMMUT, Gorakhpur (2024–2026)</b></h5>
-    <p>Core Subjects: Data Structures, DBMS, Web Development, OS</p>
-  </div>
-
-  <div class="card mb-3 shadow-sm p-3">
-    <h5><b>BCA – DDU, Gorakhpur (2021–2024)</b></h5>
-    <p>Core Subjects: Java, DBMS, Web Development</p>
-  </div>
-</div>
-      
-</div>
- <!--  skill section-->   
-<div class="container my-5"id="skills" >
-  <h3 class="text-black p-5 fa-3x text-center " > <b>My Skills</b></h3>
-
-  <div class="d-flex overflow-auto pb-3 scrollbar-hide" style="scroll-snap-type: x mandatory;">
-    <!-- Card 1 -->
-    <div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
-      <div class="card-body text-center">
-        <i class="fas fa-code fa-2x text-success mb-3"></i>
-        <h5 class="card-title">HTML</h5>
-        <p class="card-text">Markup Language used to structure web content.</p>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
-      <div class="card-body text-center">
-        <i class="fab fa-css3-alt fa-2x text-primary mb-3"></i>
-        <h5 class="card-title">CSS</h5>
-        <p class="card-text">Used for styling the layout of web pages.</p>
-      </div>
+        <div class="col-12 mt-5"><h4 class="text-primary fw-bold mb-3"><i class="fas fa-laptop-code me-2"></i>Frontend Development</h4></div>
+        
+        <div class="col-6 col-md-3" data-aos="zoom-in">
+            <div class="skill-card-new text-center p-4">
+                <i class="fab fa-js-square fa-3x text-warning mb-3"></i>
+                <h6>JavaScript</h6>
+            </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="skill-card-new text-center p-4">
+                <i class="fab fa-bootstrap fa-3x text-purple mb-3" style="color:#7952b3;"></i>
+                <h6>Bootstrap</h6>
+            </div>
+        </div>
     </div>
 
-    <!-- Card 3 -->
-    <div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
-      <div class="card-body text-center">
-        <i class="fab fa-js-square fa-2x text-warning mb-3"></i>
-        <h5 class="card-title">JavaScript</h5>
-        <p class="card-text">Adds interactivity to websites.</p>
-      </div>
+    <div class="row g-5 mt-4 skills-section">
+        <div class="col-md-6" data-aos="fade-right">
+            <div class="skill-progress-wrapper mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-bold">Java Persistence (JPA/MySQL)</span>
+                    <span class="text-primary fw-bold">85%</span>
+                </div>
+                <div class="progress shadow-sm" style="height: 10px; border-radius: 20px;">
+                    <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            
+            <div class="skill-progress-wrapper">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-bold">Spring Boot & REST APIs</span>
+                    <span class="text-primary fw-bold">75%</span>
+                </div>
+                <div class="progress shadow-sm" style="height: 10px; border-radius: 20px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6" data-aos="fade-left">
+            <div class="skill-progress-wrapper mb-4">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-bold">UI/UX (CSS & Bootstrap)</span>
+                    <span class="text-primary fw-bold">90%</span>
+                </div>
+                <div class="progress shadow-sm" style="height: 10px; border-radius: 20px;">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+            <div class="skill-progress-wrapper">
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="fw-bold">System Design & Docker</span>
+                    <span class="text-primary fw-bold">65%</span>
+                </div>
+                <div class="progress shadow-sm" style="height: 10px; border-radius: 20px;">
+                    <div class="progress-bar bg-dark" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!--  Certificate section-->
+    <section id="awards" class="container py-5">
+    <h2 class="display-4 fw-bold text-center mb-5" data-aos="fade-up">Certifications</h2>
+
+    <div class="card mb-4 border-0 shadow-sm cert-card" data-aos="fade-up">
+        <div class="card-body p-4">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="cert-icon-box me-3">
+                            <i class="fas fa-certificate fa-2x text-warning"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-0">Java Programming</h4>
+                            <span class="text-muted small">Awarded for Academic Excellence</span>
+                        </div>
+                    </div>
+                    <p class="text-secondary mb-2">
+                        Successfully completed the professional course under the seal of the institution, 
+                        demonstrating proficiency in core Java concepts and application development.
+                    </p>
+                    <div class="cert-meta d-flex flex-wrap gap-3 mt-3">
+                        <span class="badge bg-light text-dark border">Reg No: R20231106689</span>
+                        <span class="badge bg-light text-dark border">Enroll: E20236981333</span>
+                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Year: 2024</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-4 mt-md-0">
+                    <div class="verification-box p-2 border rounded bg-white d-inline-block shadow-sm">
+                        <img src="QR.jpg" alt="Verification QR" class="img-fluid" style="max-width: 80px;">
+                        <p class="text-center small fw-bold mb-0 mt-1" style="font-size: 10px;">SCAN TO VERIFY</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Card 4 -->
-    <div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
-      <div class="card-body text-center">
-        <i class="fab fa-java fa-2x text-danger mb-3"></i>
-        <h5 class="card-title">Java</h5>
-        <p class="card-text">Used for backend development.</p>
-      </div>
+    <div class="card mb-4 border-0 shadow-sm cert-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-body p-4">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="cert-icon-box me-3">
+                            <i class="fas fa-award fa-2x text-warning"></i>
+                        </div>
+                        <div>
+                            <h4 class="fw-bold mb-0">Java Full Stack Development</h4>
+                            <span class="text-muted small">Professional Certification</span>
+                        </div>
+                    </div>
+                    <p class="text-secondary mb-2">
+                        Comprehensive training completion in Full Stack Architecture including Spring Boot, 
+                        REST APIs, and Frontend Integration. Completed on November 19, 2024.
+                    </p>
+                    <div class="cert-meta mt-3">
+                        <span class="badge bg-primary-subtle text-primary border border-primary-subtle">Year: 2024</span>
+                        <span class="badge bg-success-subtle text-success border border-success-subtle ms-2">Verified Graduate</span>
+                    </div>
+                </div>
+                <div class="col-md-4 text-md-end mt-4 mt-md-0">
+                    <img src="image.png" alt="Institution Logo" class="img-fluid rounded opacity-75" style="max-width: 120px; filter: grayscale(20%);">
+                </div>
+            </div>
+        </div>
     </div>
-   
- <!-- Card 5 -->
-     <div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
-      <div class="card-body text-center">
-        <i class="fas fa-leaf fa-2x text-success mb-3"></i>
-        <h5 class="card-title">Spring Boot</h5>
-        <p class="card-text">Powerful Java framework for building REST APIs and backend apps.</p>
-      </div>
-    </div>
-<!-- Card 6 -->
-    <div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
-      <div class="card-body text-center">
-       <i class="fa-brands fa-2x fa-bootstrap mb-3" style="color: #B197FC; "></i>
-        <h5 class="card-title">Boot Strap</h5>
-        <p class="card-text">Powerful Java library.</p>
-      </div>
-    </div>
-    <!-- Add more cards -->
+</section>
+    <!--feedback-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-     <!-- Maven Card -->
-<div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
-  <div class="card-body text-center">
-    <img src="maven-svgrepo-com.svg"
-         alt="Maven"
-         class="mb-3 d-block mx-auto"
-         style="width: 40px; height: 40px; object-fit: contain;">
-    <h5 class="card-title">Maven</h5>
-    <p class="card-text">
-      Used for project build, dependency management, and lifecycle management in Java applications.
-    </p>
-  </div>
-</div>
+    <button class="floating-feedback-btn" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+      <i class="fa-solid fa-comment-dots fa-lg"></i>
+      <span>Feedback</span>
+    </button>
 
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
+          <div class="modal-header"
+            style="border: none; padding-bottom: 0; position: absolute; right: 10px; z-index: 10;">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" style="padding: 0;">
+            <div class="main-container"
+              style="display: flex; justify-content: center; padding: 20px; font-family: 'Poppins', sans-serif;">
+              <div class="feedback-card"
+                style="display: flex; flex-wrap: wrap; width: 100%; align-items: center; gap: 20px;">
 
-
-<!-- Docker Card -->
-<div class="card mx-2 shadow-sm flex-shrink-0" style="width: 16rem; scroll-snap-align: start;">
-  <div class="card-body text-center">
-    <i class="fab fa-docker fa-2x text-primary mb-3"></i>
-    <h5 class="card-title">Docker</h5>
-    <p class="card-text">
-      Used to containerize applications for consistent deployment across different environments.
-    </p>
-  </div>
-</div>
-
-  </div>
-
-<div class="row p-4 skills-section">
-  <div class="col-md-6">
-    <label>HTML&nbsp;<span class="float-end">100%</span></label>
-    <div class="progress mb-3">
-      <div class="progress-bar" data-value="100"></div>
-    </div>
-
-    <label>CSS&nbsp;<span class="float-end">95%</span></label>
-    <div class="progress mb-3">
-      <div class="progress-bar" data-value="95"></div>
-    </div>
-
-    <label>JavaScript&nbsp; <span class="float-end">75%</span></label>
-    <div class="progress mb-3">
-      <div class="progress-bar" data-value="75"></div>
-    </div>
-  </div>
-
-  <div class="col-md-6">
-    <label>Java&nbsp; <span class="float-end">85%</span></label>
-    <div class="progress mb-3">
-      <div class="progress-bar" data-value="85"></div>
-    </div>
-
-    <label>Spring Boot&nbsp; <span class="float-end">50%</span></label>
-    <div class="progress mb-3">
-      <div class="progress-bar" data-value="50"></div>
-    </div>
-
-    <label>Bootstrap&nbsp; <span class="float-end">80%</span></label>
-    <div class="progress mb-3">
-      <div class="progress-bar" data-value="80"></div>
-    </div>
-  </div>
-</div>
-</div>
-<!--  Certificate section-->
-<div id="awards" class="container my-5">
-        <h3  class="text-black p-5 fa-3x text-center" id="certificate"> <b>Certificate</b></h3>
-        Awards cards
-
-        <div class="card mb-3 border-left-primary shadow-sm">
-  <div class="card-body">
-    <div class="d-flex align-items-center mb-2">
-      <i class="fas fa-award fa-2x text-warning mr-3"></i>
-      <div>
-        <h5 class="card-title mb-1">Java Programming </h5>
-      </div>
-    </div>
-    <p class="card-text"><strong>Year:</strong> 2024 <img src="QR.jpg" alt="" height="50px" width="50px"></p>
-    <p class="card-text">Has successfully completed the course specified and is awarded this cetificate of achievement under the seal of institutions.
-      <br>Regestration No.R20231106689<br>
-    </p>Enrollment No.E20236981333
-  </div>
-</div>
-<div class="card mb-3 border-left-primary shadow-sm">
-  <div class="card-body">
-    <div class="d-flex align-items-center mb-2">
-      <i class="fas fa-award fa-2x text-warning mr-3"></i>
-      <div>
-        <h5 class="card-title mb-1">Java Full Stack </h5>
-      </div>
-    </div>
-    <p class="card-text"><strong>Year:</strong> 2024 <img src="image.png" alt="" height="50px" width="100px"></p>
-    <p class="card-text">Has successfully completed the Java Full Stack course on november 19, 2024.
-    </p>
-  </div> 
-</div>
-</div>
-<!--feedback-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<button class="floating-feedback-btn" data-bs-toggle="modal" data-bs-target="#feedbackModal">
-    <i class="fa-solid fa-comment-dots fa-lg"></i>
-    <span>Feedback</span>
-</button>
-
-<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content" style="border-radius: 20px; border: none; overflow: hidden;">
-      <div class="modal-header" style="border: none; padding-bottom: 0; position: absolute; right: 10px; z-index: 10;">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" style="padding: 0;">
-        <div class="main-container" style="display: flex; justify-content: center; padding: 20px; font-family: 'Poppins', sans-serif;">
-            <div class="feedback-card" style="display: flex; flex-wrap: wrap; width: 100%; align-items: center; gap: 20px;">
-                
                 <div class="feedback-left d-none d-md-block" style="flex: 1; text-align: left; padding: 20px;">
-                    <h1 style="font-size: 28px; font-weight: 700; color: #2c3e50; margin-bottom: 10px;">Give Your Feedback</h1>
-                    <p style="color: #7f8c8d; margin-bottom: 20px;">Let us know your thoughts!</p>
-                    <img src="download.png" alt="Feedback" style="width: 100%; max-width: 250px;">
+                  <h1 style="font-size: 28px; font-weight: 700; color: #2c3e50; margin-bottom: 10px;">Give Your Feedback
+                  </h1>
+                  <p style="color: #7f8c8d; margin-bottom: 20px;">Let us know your thoughts!</p>
+                  <img src="download.png" alt="Feedback" style="width: 100%; max-width: 250px;">
                 </div>
 
                 <div class="feedback-right" style="flex: 1; background: #ffffff; padding: 20px; border-radius: 15px;">
-                    <form id="feedbackForm">
-                        <div style="position: relative; margin-bottom: 15px;">
-                            <i class="fa-regular fa-user" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #95a5a6;"></i>
-                            <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 12px 12px 12px 45px; border: 1px solid #dfe6e9; border-radius: 8px; outline: none;">
-                        </div>
+                  <form id="feedbackForm">
+                    <div style="position: relative; margin-bottom: 15px;">
+                      <i class="fa-regular fa-user"
+                        style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #95a5a6;"></i>
+                      <input type="text" name="name" placeholder="Your Name" required
+                        style="width: 100%; padding: 12px 12px 12px 45px; border: 1px solid #dfe6e9; border-radius: 8px; outline: none;">
+                    </div>
 
-                        <div style="position: relative; margin-bottom: 15px;">
-                            <i class="fa-regular fa-envelope" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #95a5a6;"></i>
-                            <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 12px 12px 12px 45px; border: 1px solid #dfe6e9; border-radius: 8px; outline: none;">
-                        </div>
+                    <div style="position: relative; margin-bottom: 15px;">
+                      <i class="fa-regular fa-envelope"
+                        style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: #95a5a6;"></i>
+                      <input type="email" name="email" placeholder="Your Email" required
+                        style="width: 100%; padding: 12px 12px 12px 45px; border: 1px solid #dfe6e9; border-radius: 8px; outline: none;">
+                    </div>
 
-                        <textarea name="message" placeholder="Your Message" rows="4" required style="width: 100%; padding: 12px 15px; border: 1px solid #dfe6e9; border-radius: 8px; outline: none; resize: none; margin-bottom: 15px;"></textarea>
-                        
-                        <div id="starRating" style="margin-bottom: 20px; display: flex; gap: 5px;">
-                            <i class="fa-solid fa-star star-icon" data-value="1" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
-                            <i class="fa-solid fa-star star-icon" data-value="2" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
-                            <i class="fa-solid fa-star star-icon" data-value="3" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
-                            <i class="fa-solid fa-star star-icon" data-value="4" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
-                            <i class="fa-solid fa-star star-icon" data-value="5" style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
-                        </div>
-                        <input type="hidden" name="rating" id="rating_hidden" value="0">
+                    <textarea name="message" placeholder="Your Message" rows="4" required
+                      style="width: 100%; padding: 12px 15px; border: 1px solid #dfe6e9; border-radius: 8px; outline: none; resize: none; margin-bottom: 15px;"></textarea>
 
-                        <button type="submit" id="submitBtn" style="background-color: #ffcc29; border: none; padding: 12px; border-radius: 25px; color: white; font-weight: 600; width: 100%;">
-                            Submit Feedback
-                        </button>
-                    </form>
+                    <div id="starRating" style="margin-bottom: 20px; display: flex; gap: 5px;">
+                      <i class="fa-solid fa-star star-icon" data-value="1"
+                        style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                      <i class="fa-solid fa-star star-icon" data-value="2"
+                        style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                      <i class="fa-solid fa-star star-icon" data-value="3"
+                        style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                      <i class="fa-solid fa-star star-icon" data-value="4"
+                        style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                      <i class="fa-solid fa-star star-icon" data-value="5"
+                        style="cursor: pointer; font-size: 24px; color: #ccc;"></i>
+                    </div>
+                    <input type="hidden" name="rating" id="rating_hidden" value="0">
+
+                    <button type="submit" id="submitBtn"
+                      style="background-color: #0d6efd; border: none; padding: 12px; border-radius: 25px; color: white; font-weight: 600; width: 100%;">
+                      Submit Feedback
+                    </button>
+                  </form>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  <script>// Progress bar animation trigger on scroll
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bars = entry.target.querySelectorAll('.progress-bar');
+                bars.forEach(bar => {
+                    let val = bar.getAttribute('aria-valuenow');
+                    bar.style.width = val + '%';
+                });
+            }
+        });
+    }, { threshold: 0.5 });
 
-<script>
-    // 1. EmailJS Initialization
-    (function() {
-        emailjs.init("dKc8CQVQLXJXw_V3u"); 
-    })();
+    observer.observe(document.querySelector('.skills-section'));
+});</script>
+    <script>
+      // 1. EmailJS Initialization
+      (function () {
+        emailjs.init("dKc8CQVQLXJXw_V3u");
+      })();
 
-    // 2. Stars Logic
-    const stars = document.querySelectorAll('.star-icon');
-    let selectedRating = 0;
+      // 2. Stars Logic
+      const stars = document.querySelectorAll('.star-icon');
+      let selectedRating = 0;
 
-    stars.forEach(star => {
+      stars.forEach(star => {
         star.addEventListener('click', () => {
-            selectedRating = star.getAttribute('data-value');
-            document.getElementById('rating_hidden').value = selectedRating;
-            updateStars(selectedRating);
+          selectedRating = star.getAttribute('data-value');
+          document.getElementById('rating_hidden').value = selectedRating;
+          updateStars(selectedRating);
         });
         star.addEventListener('mouseover', () => updateStars(star.getAttribute('data-value')));
         star.addEventListener('mouseleave', () => updateStars(selectedRating));
-    });
+      });
 
-    function updateStars(rating) {
+      function updateStars(rating) {
         stars.forEach(s => {
-            s.style.color = s.getAttribute('data-value') <= rating ? "#ffcc29" : "#ccc";
+          s.style.color = s.getAttribute('data-value') <= rating ? "#ffcc29" : "#ccc";
         });
-    }
+      }
 
-    // 3. Form Submission & Modal Auto-Close
-    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      // 3. Form Submission & Modal Auto-Close
+      document.getElementById('feedbackForm').addEventListener('submit', function (e) {
         e.preventDefault();
         const btn = document.getElementById('submitBtn');
         btn.innerText = "Sending...";
         btn.disabled = true;
 
         emailjs.sendForm('service_3rbjnhe', 'template_oemt2p9', this)
-            .then(() => {
-                alert("Success! Your feedback has been sent.");
-                
-                // Modal Close Logic
-                const modalElement = document.getElementById('feedbackModal');
-                const modalInstance = bootstrap.Modal.getInstance(modalElement);
-                if (modalInstance) modalInstance.hide();
+          .then(() => {
+            alert("Success! Your feedback has been sent.");
 
-                btn.innerText = "Submit Feedback";
-                btn.disabled = false;
-                this.reset(); 
-                selectedRating = 0;
-                updateStars(0); 
-            }, (error) => {
-                alert("Error: " + JSON.stringify(error));
-                btn.innerText = "Submit Feedback";
-                btn.disabled = false;
-            });
-    });
-</script>
-<!--  footer section-->
-<footer>
-<div class="fcontainer">
-  <div class="footer-content">
-    <h3><b>Contact Us</b></h3>
-    <p>Email: juhirajput022@gmail.com</p>
-    <p>Phone: +91 78803-44407</p>
-    <p>Address: Gorakhpur,Uttar Pradesh,India</p>
-  </div>
-    <div class="footer-content">
-      <h3><b>Quick Links</b></h3>
-      <ul class="list">
-        <li><a href="#home"> Home</a></li>
-         <li><a href="#about"> About</a></li>
-          <li><a href="#project"> Projects</a></li>
-          <li><a href="#education"> Education</a></li>
-           <li><a href="#skills"> Skills</a></li>
-            <li><a href="#certificate"> Certificate</a></li>
-      </ul>
-     </div>
-<div class="footer-content">
-      <h3><b>Follow Us</b></h3>
-      <ul class="list">
-        <li><a href="https://github.com/Juhisingh022"><i class="fa-brands fa-github"></i></a></li>
-         <li><a href="http://www.linkedin.com/in/juhi-singh-a00b141a7"><i class="fa-brands fa-linkedin"></i> </a></li>
-          <li><a href="https://www.instagram.com/juhirajput022?igsh=bHE2cHh3ZDVja3Rk"><i class="fa-brands fa-instagram"></i></a></li>
-        </ul>
+            // Modal Close Logic
+            const modalElement = document.getElementById('feedbackModal');
+            const modalInstance = bootstrap.Modal.getInstance(modalElement);
+            if (modalInstance) modalInstance.hide();
+
+            btn.innerText = "Submit Feedback";
+            btn.disabled = false;
+            this.reset();
+            selectedRating = 0;
+            updateStars(0);
+          }, (error) => {
+            alert("Error: " + JSON.stringify(error));
+            btn.innerText = "Submit Feedback";
+            btn.disabled = false;
+          });
+      });
+    </script>
+    <div class="modal fade" id="socioCaseStudy" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
+          <div class="modal-header bg-dark text-white" style="border-radius: 20px 20px 0 0;">
+            <h5 class="modal-title fw-bold">Project Case Study: SocioScore</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 p-md-5">
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <h4 class="text-primary fw-bold"><i class="fas fa-bullseye me-2"></i>The Problem</h4>
+                <p class="text-secondary">Traditional reputation tracking in organizations is often manual and biased.
+                  There was no automated way to measure reliability based on actual data and task completion.</p>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <h4 class="text-primary fw-bold"><i class="fas fa-lightbulb me-2"></i>The Solution</h4>
+                <p class="text-secondary">SocioScore automates this using a custom algorithm. It tracks user activities
+                  and calculates a 'Trust Score' that promotes accountability.</p>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <h4 class="text-primary fw-bold"><i class="fas fa-code me-2"></i>Tech Stack</h4>
+                <ul class="list-unstyled text-secondary">
+                  <li><strong>Backend:</strong> Java 21, Spring Boot</li>
+                  <li><strong>Security:</strong> Spring Security (Auth)</li>
+                  <li><strong>Database:</strong> MySQL</li>
+                  <li><strong>Deployment:</strong> Docker Containers</li>
+                </ul>
+              </div>
+
+              <div class="col-md-12">
+                <h4 class="text-primary fw-bold"><i class="fas fa-check-circle me-2"></i>Key Features</h4>
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                  <span class="badge bg-light text-dark border p-2">Real-time Scoring</span>
+                  <span class="badge bg-light text-dark border p-2">Admin Dashboard</span>
+                  <span class="badge bg-light text-dark border p-2">REST API Integration</span>
+                  <span class="badge bg-light text-dark border p-2">Dockerized Setup</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+            <a href="https://socioscore-production.up.railway.app/" target="_blank"
+              class="btn btn-dark rounded-pill px-4">Live link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="xplorCaseStudy" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
+          <div class="modal-header bg-dark text-white" style="border-radius: 20px 20px 0 0;">
+            <h5 class="modal-title fw-bold">Project Case Study: XplorIndia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-4 p-md-5">
+            <div class="row">
+              <div class="col-md-12 mb-4">
+                <h4 class="text-primary fw-bold"><i class="fas fa-map-marked-alt me-2"></i>The Concept</h4>
+                <p class="text-secondary">XplorIndia was developed to bridge the gap between new students/tourists and
+                  city resources. It serves as a one-stop digital directory for navigating city-specific amenities.</p>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <h4 class="text-primary fw-bold"><i class="fas fa-search-location me-2"></i>Core Objective</h4>
+                <p class="text-secondary">To provide a user-friendly interface where users can find verified information
+                  about local institutes, hospitals, and tourist attractions without multiple web searches.</p>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <h4 class="text-primary fw-bold"><i class="fas fa-layer-group me-2"></i>Tech Stack</h4>
+                <ul class="list-unstyled text-secondary">
+                  <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                  <li><strong>Backend:</strong> Java (Servlets & JSP)</li>
+                  <li><strong>Database:</strong> MySQL</li>
+                  <li><strong>Tools:</strong> Maven, Apache Tomcat</li>
+                </ul>
+              </div>
+
+              <div class="col-md-12">
+                <h4 class="text-primary fw-bold"><i class="fas fa-list-stars me-2"></i>Key Features</h4>
+                <div class="d-flex flex-wrap gap-2 mt-2">
+                  <span class="badge bg-light text-dark border p-2">Category-based Filtering</span>
+                  <span class="badge bg-light text-dark border p-2">Location Mapping</span>
+                  <span class="badge bg-light text-dark border p-2">User Feedback System</span>
+                  <span class="badge bg-light text-dark border p-2">Responsive Directory</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-secondary rounded-pill px-4" data-bs-dismiss="modal">Close</button>
+            <a href="#1" target="_blank"
+              class="btn btn-dark rounded-pill px-4">Live link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="hireMeModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
+            <div class="modal-header bg-primary text-white" style="border-radius: 20px 20px 0 0;">
+                <h5 class="modal-title fw-bold">Let's Work Together!</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-secondary mb-4">I'm currently looking for new opportunities. Feel free to reach out through any of these channels:</p>
+                
+                <div class="list-group list-group-flush">
+                    <a href="https://wa.me/917880344407" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center py-3 border-0">
+                        <i class="fab fa-whatsapp fa-2x text-success me-3"></i>
+                        <div>
+                            <h6 class="mb-0 fw-bold">WhatsApp</h6>
+                            <small class="text-muted">+91 78803-44407</small>
+                        </div>
+                    </a>
+
+                    <a href="mailto:juhirajput022@gmail.com" class="list-group-item list-group-item-action d-flex align-items-center py-3 border-0">
+                        <i class="fas fa-envelope fa-2x text-danger me-3"></i>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Email Me</h6>
+                            <small class="text-muted">juhirajput022@gmail.com</small>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/juhi-singh-a00b141a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="list-group-item list-group-item-action d-flex align-items-center py-3 border-0">
+                        <i class="fab fa-linkedin fa-2x text-primary me-3"></i>
+                        <div>
+                            <h6 class="mb-0 fw-bold">LinkedIn</h6>
+                            <small class="text-muted">Connect professionally</small>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer border-0 justify-content-center pb-4">
+                <p class="small text-muted">Available for Full-time & Freelance roles</p>
+            </div>
+        </div>
     </div>
 </div>
-<div class="bootom-bar">
-  <p>&copy; Juhi Singh. All rights reserved.</p>
-</div>
-</footer> 
-</Section>
+    <!--  footer section-->
+   <footer class="pt-5 pb-3 bg-dark text-white position-relative overflow-hidden">
+  <div class="position-absolute bottom-0 start-0 bg-primary opacity-10 blur-3xl" style="width: 300px; height: 300px; filter: blur(100px); border-radius: 50%;"></div>
+
+  <div class="container position-relative z-index-1">
+    <div class="row gy-4">
+      
+      <div class="col-lg-4 col-md-6">
+        <h2 class="fw-bold mb-3 text-white">JUHI<span class="text-primary">.</span></h2>
+        <p class="text-secondary pe-lg-5">
+          Full Stack Java Developer focused on building high-quality, scalable web applications and solving real-world problems through clean code.
+        </p>
+        <div class="d-flex gap-3 mt-4">
+          <a href="https://github.com/Juhisingh022" class="footer-social-link"><i class="fab fa-github"></i></a>
+          <a href="http://www.linkedin.com/in/juhi-singh-a00b141a7" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/juhirajput022" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-2 col-md-6">
+        <h5 class="fw-bold mb-4">Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#certificate">Certificates</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-4">Get In Touch</h5>
+        <div class="d-flex align-items-center mb-3">
+          <div class="contact-icon me-3"><i class="fas fa-envelope"></i></div>
+          <a href="mailto:juhirajput022@gmail.com" class="text-secondary text-decoration-none">juhirajput022@gmail.com</a>
+        </div>
+        <div class="d-flex align-items-center mb-3">
+          <div class="contact-icon me-3"><i class="fas fa-phone-alt"></i></div>
+          <p class="text-secondary mb-0">+91 78803-44407</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <div class="contact-icon me-3"><i class="fas fa-map-marker-alt"></i></div>
+          <p class="text-secondary mb-0">Gorakhpur, UP, India</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-4">Work Inquiry</h5>
+        <p class="text-secondary small">Let's build something amazing together!</p>
+        <a href="mailto:juhirajput022@gmail.com" class="btn btn-primary w-100 rounded-pill py-2 mt-2 fw-bold shadow-sm">
+          Hire Me <i class="fas fa-paper-plane ms-2"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <hr class="my-4 border-secondary opacity-25">
+
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0 text-secondary small">&copy; 2025 <span class="text-white fw-bold">Juhi Singh</span>. Crafted with <i class="fas fa-heart text-danger"></i></p>
+      </div>
+      <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+        <p class="mb-0 text-secondary small">MCA @ MMMUT, Gorakhpur</p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </Section>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const progressBars = document.querySelectorAll(".progress-bar");
+  const navbar = document.getElementById('navbar');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
 
-  function animateBars() {
-    progressBars.forEach(bar => {
-      let value = bar.getAttribute("data-value");
-      let width = 0;
-
-      let interval = setInterval(() => {
-        if (width >= value) {
-          clearInterval(interval);
-
-          // Final color apply
-          if (value <= 50) {
-            bar.style.backgroundColor = "red";
-          } else if (value <= 75) {
-            bar.style.backgroundColor = "orange";
-          } else if (value <= 85) {
-            bar.style.backgroundColor = "gold";
-          } else if (value == 100) {
-            bar.style.backgroundColor = "green";
-          } else {
-            bar.style.backgroundColor = "#0d6efd"; // Bootstrap blue (default)
-          }
-
-        } else {
-          width++;
-          bar.style.width = width + "%";
-        }
-      }, 15); 
-    });
-  }
-
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
-  }
-
-  window.addEventListener("scroll", function scrollHandler() {
-    const skills = document.querySelector(".skills-section");
-    if (isInViewport(skills)) {
-      animateBars();
-      window.removeEventListener("scroll", scrollHandler);
+  // Scroll logic: Navbar shrink on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
     }
   });
-});
+
+  // Mobile menu toggle with icon change
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    const isHidden = mobileMenu.classList.contains('hidden');
+    menuIcon.className = isHidden ? 'fas fa-bars-staggered' : 'fas fa-times';
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      menuIcon.className = 'fas fa-bars-staggered';
+    });
+  });
 </script>
+  
   <script>
-   
+
     const toggle = document.getElementById('modeToggle');
     toggle.addEventListener('click', () => {
       const html = document.documentElement;
@@ -629,47 +872,65 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
     function showSection(id) {
-  const sections = document.querySelectorAll('.section');
-  const tabs = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('.section');
+      const tabs = document.querySelectorAll('.nav-link');
 
-  sections.forEach(s => s.classList.remove('active'));
-  tabs.forEach(t => t.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      tabs.forEach(t => t.classList.remove('active'));
 
-  document.getElementById(id).classList.add('active');
-  event.target.classList.add('active');
-}
-  function drawSkillChart(canvasId, value, color) {
-    const ctx = document.getElementById(canvasId).getContext('2d');
-    new Chart(ctx, {
-      type: 'doughnut',
-      data: {
-        datasets: [{
-          data: [value, 100 - value],
-          backgroundColor: [color, '#eaeaea'],
-          borderWidth: 0
-        }]
-      },
-      options: {
-        cutout: '100%',
-        plugins: {
-          tooltip: { enabled: false },
-          legend: { display: false }
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+    function drawSkillChart(canvasId, value, color) {
+      const ctx = document.getElementById(canvasId).getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          datasets: [{
+            data: [value, 100 - value],
+            backgroundColor: [color, '#eaeaea'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          cutout: '100%',
+          plugins: {
+            tooltip: { enabled: false },
+            legend: { display: false }
+          }
         }
-      }
-    });
-  }
+      });
+    }
 
-  drawSkillChart("htmlSkill", 100, "#f16529");
-  drawSkillChart("cssSkill", 80, "#2965f1");  
-  drawSkillChart("jsSkill", 75, "#f0db4f");   
-</script>
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
-</script>
+    drawSkillChart("htmlSkill", 100, "#f16529");
+    drawSkillChart("cssSkill", 80, "#2965f1");
+    drawSkillChart("jsSkill", 75, "#f0db4f");   
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <script>
+    var typed = new Typed("#typing", {
+      strings: [
+        "Juhi Singh",
+        "Full Stack Java Developer",
+        "Spring Boot Developer",
+        "Backend Developer"
+      ],
+      typeSpeed: 80,
+      backSpeed: 50,
+      loop: true
+    });
+  </script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
