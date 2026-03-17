@@ -253,7 +253,8 @@ nav a:hover::after {
 }
 
 .tech-stack span {
-  background: #f1f5f9;
+  background: #000;
+  color: #fff;
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 0.7rem;
