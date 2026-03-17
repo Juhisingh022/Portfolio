@@ -292,6 +292,37 @@ nav a:hover::after {
 }
 
 
+/* --- Dark Mode Overrides for Navbar --- */
+
+/* Background badalne ke liye */
+[data-bs-theme="dark"] #main-nav,
+[data-bs-theme="dark"] #mobile-menu {
+  background-color: rgba(15, 15, 15, 0.95) !important; /* Pure Blackish Background */
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Text white karne ke liye */
+[data-bs-theme="dark"] #logo-text,
+[data-bs-theme="dark"] .mobile-nav-link,
+[data-bs-theme="dark"] .nav-link-custom,
+[data-bs-theme="dark"] #menu-btn {
+  color: #ffffff !important;
+}
+
+/* Theme switch box ka color change */
+[data-bs-theme="dark"] #theme-box {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-bs-theme="dark"] #theme-text {
+  color: #cccccc !important;
+}
+
+/* Borders ka color change mobile menu mein */
+[data-bs-theme="dark"] .mobile-nav-link {
+  border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+}
+
 .modal-content {
   animation: zoomIn 0.3s ease;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -27,7 +27,7 @@
 <body>
   <!-- Navbar -->
 <header class="fixed top-0 w-full z-[1000] transition-all duration-300" id="navbar">
-  <nav class="bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
+  <nav id="main-nav" class="bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
       
       <a href="#home" class="flex items-center group no-underline">
@@ -37,7 +37,7 @@
                loading="lazy" />
           <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full"></div>
         </div>
-        <span class="ms-3 text-xl font-black tracking-tighter text-black">
+        <span id="logo-text" class="ms-3 text-xl font-black tracking-tighter text-black transition-colors">
           JUHI<span class="text-blue-600">.</span>
         </span>
       </a>
@@ -51,7 +51,7 @@
         <div class="h-6 w-[1px] bg-gray-200"></div>
         
         <div class="flex items-center gap-4">
-          <button id="modeToggleDesktop" class="mode-toggle-btn p-2 rounded-xl bg-gray-50 hover:bg-gray-100 text-gray-700 border-0 shadow-sm">
+          <button id="modeToggleDesktop" class="mode-toggle-btn p-2 rounded-xl bg-gray-50 hover:bg-gray-100 text-gray-700 border-0 shadow-sm transition-all">
             <i class="fas fa-moon"></i>
           </button>
           <a href="JUHI.pdf" class="bg-black text-white px-5 py-2 rounded-full text-sm font-bold hover:bg-blue-600 transition-all no-underline shadow-lg">
@@ -60,22 +60,25 @@
         </div>
       </div>
 
-      <button id="menu-btn" class="md:hidden p-2 text-2xl text-black border-0 bg-transparent focus:outline-none">
+      <button id="menu-btn" class="md:hidden p-2 text-2xl text-black border-0 bg-transparent focus:outline-none transition-colors">
         <i class="fas fa-bars-staggered" id="menu-icon"></i>
       </button>
     </div>
-<button id="modeToggleMobile" class="mode-toggle-btn p-3 rounded-xl bg-white shadow-sm border-0 text-gray-800">
-            <i class="fas fa-moon"></i>
-          </button>
-    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-100 shadow-xl overflow-y-auto" style="max-height: 90vh;">
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-gray-100 shadow-xl overflow-y-auto transition-colors duration-300" style="max-height: 90vh;">
       <div class="px-6 py-8 flex flex-col space-y-4">
         
-       
+        <div id="theme-box" class="flex items-center justify-between bg-gray-50 p-4 rounded-2xl mb-2 transition-colors">
+          <span id="theme-text" class="font-bold text-gray-700">Switch Theme</span>
+          <button id="modeToggleMobile" class="mode-toggle-btn p-3 rounded-xl bg-white shadow-sm border-0 text-gray-800 transition-all">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
 
-        <a href="#about" class="mobile-nav-link text-center py-3 text-black font-bold no-underline border-b border-gray-100">About</a>
-        <a href="#project" class="mobile-nav-link text-center py-3 text-black font-bold no-underline border-b border-gray-100">Projects</a>
-        <a href="#education" class="mobile-nav-link text-center py-3 text-black font-bold no-underline border-b border-gray-100">Education</a>
-        <a href="#skills" class="mobile-nav-link text-center py-3 text-black font-bold no-underline border-b border-gray-100">Skills</a>
+        <a href="#about" class="mobile-nav-link text-center py-3 text-black font-bold no-underline border-b border-gray-100 transition-colors">About</a>
+        <a href="#project" class="mobile-nav-link text-center py-3 text-black font-bold no-underline border-b border-gray-100 transition-colors">Projects</a>
+        <a href="#education" class="mobile-nav-link text-center py-3 text-black font-bold no-underline border-b border-gray-100 transition-colors">Education</a>
+        <a href="#skills" class="mobile-nav-link text-center py-3 text-black font-bold no-underline border-b border-gray-100 transition-colors">Skills</a>
         
         <a href="JUHI.pdf" class="bg-blue-600 text-white py-4 rounded-2xl font-bold no-underline mt-4 text-center shadow-lg shadow-blue-200">
           Download Resume <i class="fas fa-download ms-2"></i>
@@ -118,9 +121,9 @@
                         <i class="fas fa-cloud-download-alt me-2"></i>Get Resume
                     </a>
                     <div class="social-links d-flex gap-3 ms-lg-3">
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/juhirajput022" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/juhirajput022" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/juhirajput022" class="social-icon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -324,29 +327,79 @@
             </div>
         </div>
 
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="150">
+            <div class="skill-card-new text-center p-4">
+                <i class="fas fa-cloud fa-3x text-info mb-3"></i>
+                <h6>RESTful APIs</h6>
+            </div>
+        </div>
+
         <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="skill-card-new text-center p-4">
+                <i class="fas fa-link fa-3x text-secondary mb-3"></i>
+                <h6>JDBC / Servlets</h6>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="250">
             <div class="skill-card-new text-center p-4">
                 <i class="fab fa-docker fa-3x text-primary mb-3"></i>
                 <h6>Docker</h6>
             </div>
         </div>
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+    <div class="skill-card-new text-center p-4 h-100">
+        <div class="mb-3 d-flex justify-content-center align-items-center" style="height: 60px;">
+            <img src="micro.png" style="width:50px; height:auto;" alt="Microservices">
+        </div>
+        <h6 class="fw-bold">Microservices</h6>
+    </div>
+</div>
 
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+<div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+    <div class="skill-card-new text-center p-4 h-100">
+        <div class="mb-3 d-flex justify-content-center align-items-center" style="height: 60px;">
+            <img src="maven-svgrepo-com.svg" style="width:50px; height:auto;" alt="Maven">
+        </div>
+        <h6 class="fw-bold">Maven</h6>
+    </div>
+</div>
+
+<div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="400">
+    <div class="skill-card-new text-center p-4 h-100">
+        <div class="mb-3 d-flex justify-content-center align-items-center" style="height: 60px;">
+            <i class="fas fa-stream fa-3x" style="color: #111111;"></i>
+        </div>
+        <h6 class="fw-bold">Apache Kafka</h6>
+    </div>
+</div>
+    </div>
+
+    <div class="row g-4 mb-5 justify-content-center">
+        <div class="col-12"><h4 class="text-primary fw-bold mb-3"><i class="fas fa-laptop-code me-2"></i>Frontend Development</h4></div>
+        
+        <div class="col-6 col-md-3" data-aos="zoom-in">
             <div class="skill-card-new text-center p-4">
-                <img src="maven-svgrepo-com.svg" style="width:48px; height:48px;" class="mb-3 mx-auto">
-                <h6>Maven</h6>
+                <i class="fab fa-react fa-3x text-info mb-3"></i>
+                <h6>React.js</h6>
             </div>
         </div>
 
-        <div class="col-12 mt-5"><h4 class="text-primary fw-bold mb-3"><i class="fas fa-laptop-code me-2"></i>Frontend Development</h4></div>
-        
-        <div class="col-6 col-md-3" data-aos="zoom-in">
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
             <div class="skill-card-new text-center p-4">
                 <i class="fab fa-js-square fa-3x text-warning mb-3"></i>
                 <h6>JavaScript</h6>
             </div>
         </div>
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="skill-card-new text-center p-4">
+                <i class="fab fa-html5 fa-3x text-danger mb-3"></i>
+                <h6>HTML5 / CSS3</h6>
+            </div>
+        </div>
+        
+        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
             <div class="skill-card-new text-center p-4">
                 <i class="fab fa-bootstrap fa-3x text-purple mb-3" style="color:#7952b3;"></i>
                 <h6>Bootstrap</h6>
@@ -354,48 +407,13 @@
         </div>
     </div>
 
-    <div class="row g-5 mt-4 skills-section">
-        <div class="col-md-6" data-aos="fade-right">
-            <div class="skill-progress-wrapper mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-bold">Java Persistence (JPA/MySQL)</span>
-                    <span class="text-primary fw-bold">85%</span>
-                </div>
-                <div class="progress shadow-sm" style="height: 10px; border-radius: 20px;">
-                    <div class="progress-bar progress-bar-animated progress-bar-striped" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-            
-            <div class="skill-progress-wrapper">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-bold">Spring Boot & REST APIs</span>
-                    <span class="text-primary fw-bold">75%</span>
-                </div>
-                <div class="progress shadow-sm" style="height: 10px; border-radius: 20px;">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-6" data-aos="fade-left">
-            <div class="skill-progress-wrapper mb-4">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-bold">UI/UX (CSS & Bootstrap)</span>
-                    <span class="text-primary fw-bold">90%</span>
-                </div>
-                <div class="progress shadow-sm" style="height: 10px; border-radius: 20px;">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
-
-            <div class="skill-progress-wrapper">
-                <div class="d-flex justify-content-between mb-2">
-                    <span class="fw-bold">System Design & Docker</span>
-                    <span class="text-primary fw-bold">65%</span>
-                </div>
-                <div class="progress shadow-sm" style="height: 10px; border-radius: 20px;">
-                    <div class="progress-bar bg-dark" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
+    <div class="row g-4 mb-5 justify-content-center">
+        <div class="col-12"><h4 class="text-primary fw-bold mb-3"><i class="fas fa-database me-2"></i>Database Management</h4></div>
+                
+        <div class="col-6 col-md-3" data-aos="zoom-in">
+            <div class="skill-card-new text-center p-4">
+                <i class="fas fa-server fa-3x mb-3" style="color: #00758f;"></i> 
+                <h6>MySQL</h6>
             </div>
         </div>
     </div>
@@ -944,9 +962,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var typed = new Typed("#typing", {
       strings: [
         "Juhi Singh",
-        "Full Stack Java Developer",
-        "Spring Boot Developer",
-        "Backend Developer"
+        "Full Stack Java Developer"
       ],
       typeSpeed: 80,
       backSpeed: 50,
